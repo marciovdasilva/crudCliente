@@ -30,7 +30,7 @@
           <div class="navbar-item">
             <template v-if="user">
               <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">{{ user.email }}</a>
+                <a class="navbar-link">{{ user}}</a> 
                 <div class="navbar-dropdown">
                   <router-link class="navbar-item" to="/dashboard">Dashboard</router-link>
                   <a class="navbar-item" @click.prevent="logout">Finalizar a sessão</a>
