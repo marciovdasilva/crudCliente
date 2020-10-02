@@ -2,8 +2,8 @@
   <div>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <router-link class="navbar-item" to="/">
-          <h3 class="title is-3">Crud</h3>
+        <router-link class="navbar-item" to="/Dashboard">
+          <h3 class="title is-3">Cadastro de Clientes</h3>
         </router-link>
 
         <a
@@ -20,17 +20,17 @@
           <span aria-hidden="true"></span>
         </a>
       </div>
-
+      
       <div id="navbarBasicExample" class="navbar-menu" :class="{'is-active': isOpen}">
         <div class="navbar-start">
-          <router-link class="navbar-item" to="/">Home </router-link>
+          <router-link class="navbar-item" to="/"> </router-link>
         </div>
-
+        
         <div class="navbar-end">
           <div class="navbar-item">
             <template v-if="user">
               <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">{{ user}}</a> 
+                <a class="navbar-link">{{ user.email}}</a> 
                 <div class="navbar-dropdown">
                   <router-link class="navbar-item" to="/dashboard">Dashboard</router-link>
                   <a class="navbar-item" @click.prevent="logout">Finalizar a sessão</a>

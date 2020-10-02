@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Login from './views/Auth/Login.vue'
 import Register from './views/Auth/Register.vue'
+import ClientEdit from './views/Client/ClientEdit.vue'
 import Dashboard from './views/Dashboard.vue'
 import firebase from 'firebase'
 
@@ -33,6 +34,12 @@ const router = new Router({
     meta: {
       requiresAuth: true
     }
+  },
+  {
+    path: '/client_edit',
+    name: 'ClientEdit',
+    component: ClientEdit,
+    props: true   
   }
 
   ]

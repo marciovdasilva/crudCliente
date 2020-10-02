@@ -72,11 +72,12 @@ export default {
       this.error = ''
       if (this.name && this.email && this.password) {
         firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
-          .then(user => {
+          .then(response => {
+            let user = response.user || null
             if(user){
               user.updateProfile({
                 displayName: this.name
-              }).then((u) => {               //u...........................
+              }).then((u) => {               
                 this.name = ''
                 this.email = ''
                 this.password = ''
